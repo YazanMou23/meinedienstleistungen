@@ -124,14 +124,14 @@ export default function Header() {
               <a
                 href={`tel:${SITE_CONFIG.phone.replace(/\s/g, '')}`}
                 className={cn(
-                  'flex items-center gap-2 text-sm font-semibold transition-colors',
+                  'flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 border',
                   solidHeader
-                    ? 'text-slate-700 hover:text-[#c0a678]'
-                    : 'text-white/80 hover:text-white'
+                    ? 'border-slate-200 text-slate-700 hover:text-[#c0a678] hover:bg-slate-50'
+                    : 'border-white/20 text-white hover:bg-white/10'
                 )}
+                aria-label="Anrufen"
               >
-                <Phone size={15} />
-                {SITE_CONFIG.phoneDisplay}
+                <Phone size={18} />
               </a>
               <Link
                 href="/kontakt"

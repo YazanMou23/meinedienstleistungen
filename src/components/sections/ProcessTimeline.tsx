@@ -62,7 +62,7 @@ export default function ProcessTimeline({ compact = false, showCta = true }: Pro
           {/* Vertical connector line */}
           <div className="absolute left-[28px] md:left-1/2 md:-translate-x-px top-8 bottom-8 w-0.5 bg-gradient-to-b from-[#c0a678] via-[#c0a678]/40 to-transparent hidden sm:block" />
 
-          <div className="space-y-6 md:space-y-0">
+          <div className="space-y-12 md:space-y-16">
             {steps.map((step, index) => {
               const Icon = iconMap[step.icon] || CheckCircle2;
               const isEven = index % 2 === 0;
@@ -76,7 +76,7 @@ export default function ProcessTimeline({ compact = false, showCta = true }: Pro
                   transition={{ duration: 0.5, delay: index * 0.08 }}
                   className={cn(
                     'relative',
-                    !compact && 'md:grid md:grid-cols-2 md:gap-8 md:mb-8'
+                    !compact && 'md:grid md:grid-cols-2 md:gap-8'
                   )}
                 >
                   {!compact ? (
