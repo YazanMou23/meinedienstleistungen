@@ -21,7 +21,7 @@ export default function StickyCtaBar() {
         <div className="w-px h-14 bg-white/10" />
         {/* CTA Button */}
         <Link
-          href="/kontakt"
+          href="/auftraggeber"
           className="flex-[2] flex items-center justify-center gap-2 bg-[#c0a678] text-white h-14 font-bold text-sm hover:bg-[#aa905d] transition-colors active:bg-[#aa905d]"
         >
           <MessageSquare size={18} />

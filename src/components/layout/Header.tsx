@@ -104,6 +104,7 @@ export default function Header() {
                     href={item.href}
                     className={cn(
                       'px-3 py-2 rounded-lg text-sm font-medium transition-colors',
+                      (item as any).highlight ? 'bg-slate-900 text-white hover:bg-slate-800' : 
                       pathname === item.href
                         ? solidHeader
                           ? 'text-[#c0a678] bg-blue-50'
@@ -134,7 +135,7 @@ export default function Header() {
                 <Phone size={18} />
               </a>
               <Link
-                href="/kontakt"
+                href="/auftraggeber"
                 className="bg-[#c0a678] hover:bg-[#aa905d] text-white text-sm font-bold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#c0a678]/25 active:scale-[0.98]"
               >
                 Projekt anfragen
@@ -273,7 +274,7 @@ export default function Header() {
                 {SITE_CONFIG.phoneDisplay}
               </a>
               <Link
-                href="/kontakt"
+                href="/auftraggeber"
                 className="flex items-center justify-center gap-2 w-full bg-[#c0a678] hover:bg-[#aa905d] text-white font-bold px-6 py-3.5 rounded-xl transition-colors text-center shadow-sm"
               >
                 Projekt anfragen

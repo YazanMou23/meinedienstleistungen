@@ -47,6 +47,8 @@ export const NAV_ITEMS = [
   { label: 'Über MDL', href: '/ueber-uns' },
   { label: 'Ablauf', href: '/ablauf' },
   { label: 'Kontakt', href: '/kontakt' },
+  { label: 'Partner werden', href: '/auftragnehmer' },
+  { label: 'Projekt anfragen', href: '/auftraggeber', highlight: true },
 ] as const;
 
 export const SERVICES = [
