@@ -85,12 +85,12 @@ export const SERVICES = [
       'Keine einheitliche Dokumentation der Kabelinfrastruktur nach Fertigstellung',
     ],
     gallery: [
-      { src: '/images/services/kabelzieharbeiten/kabelzug-logistikhalle.jpg', alt: 'Kabelzug in Logistikhalle Duisburg', title: 'Kabelzug Logistikhalle', caption: 'Kabelmontage in einer modernen Logistikhalle im Ruhrgebiet' },
-      { src: '/images/services/kabelzieharbeiten/kabelmontage-gewerbe.jpg', alt: 'Kabelmontage Gewerbegebäude NRW', title: 'Kabelmontage Gewerbe', caption: 'Professionelle Kabelmontage für Gewerbeprojekte in NRW' },
-      { src: '/images/services/kabelzieharbeiten/kabeltrasse-industrie.jpg', alt: 'Kabeltrasse Industrieanlage', title: 'Kabeltrassen Installation', caption: 'Installation von Kabeltrassen in einer Industrieanlage' },
-      { src: '/images/services/kabelzieharbeiten/glasfaser-verlegung.jpg', alt: 'Glasfaser Verlegung Duisburg', title: 'Glasfaserverlegung', caption: 'Glasfaserverlegung für schnelle Datenübertragung' },
-      { src: '/images/services/kabelzieharbeiten/netzwerkkabel-datenzentrum.jpg', alt: 'Netzwerkkabel Datenzentrum', title: 'Netzwerkkabel', caption: 'Strukturierte Verkabelung im Rechenzentrum' },
-      { src: '/images/services/kabelzieharbeiten/elektroinstallation-halle.jpg', alt: 'Elektroinstallation Gewerbehalle', title: 'Elektroinstallation', caption: 'Elektroinstallation in einer modernen Gewerbehalle' },
+      { src: '/images/services/kabelzug_logistikhalle_1783976725308.png', alt: 'Kabelzug in Logistikhalle Duisburg', title: 'Kabelzug Logistikhalle', caption: 'Kabelmontage in einer modernen Logistikhalle im Ruhrgebiet' },
+      { src: '/images/services/kabelmontage_gewerbe_1783978552528.png', alt: 'Kabelmontage Gewerbegebäude NRW', title: 'Kabelmontage Gewerbe', caption: 'Professionelle Kabelmontage für Gewerbeprojekte in NRW' },
+      { src: '/images/services/kabeltrasse_industrie_1783977848037.png', alt: 'Kabeltrasse Industrieanlage', title: 'Kabeltrassen Installation', caption: 'Installation von Kabeltrassen in einer Industrieanlage' },
+      { src: '/images/services/glasfaser_verlegung_1783978571071.png', alt: 'Glasfaser Verlegung Duisburg', title: 'Glasfaserverlegung', caption: 'Glasfaserverlegung für schnelle Datenübertragung' },
+      { src: '/images/services/netzwerkkabel_datenzentrum_1783979176957.png', alt: 'Netzwerkkabel Datenzentrum', title: 'Netzwerkkabel', caption: 'Strukturierte Verkabelung im Rechenzentrum' },
+      { src: '/images/services/elektroinstallation_halle_1783979192172.png', alt: 'Elektroinstallation Gewerbehalle', title: 'Elektroinstallation', caption: 'Elektroinstallation in einer modernen Gewerbehalle' },
     ],
     faqs: [
       {
@@ -162,12 +162,12 @@ export const SERVICES = [
       'Kurzfristiger Reinigungsbedarf (z. B. nach Bauarbeiten) ohne verfügbare Kapazitäten',
     ],
     gallery: [
-      { src: '/images/services/reinigungsdienst/bueroreinigung-modern.jpg', alt: 'Bürogenreinigung modernes Bürogebäude NRW', title: 'Büroreinigung', caption: 'Professionelle Büroreinigung in Duisburg' },
-      { src: '/images/services/reinigungsdienst/industriereinigung-halle.jpg', alt: 'Industriereinigung Lagerhalle Duisburg', title: 'Industriereinigung', caption: 'Reinigung großer Industriehallen im Ruhrgebiet' },
-      { src: '/images/services/reinigungsdienst/baureinigung-baustelle.jpg', alt: 'Baureinigung Baustelle NRW', title: 'Baureinigung', caption: 'Endreinigung nach Baumaßnahmen' },
-      { src: '/images/services/reinigungsdienst/grundreinigung-gewerbe.jpg', alt: 'Grundreinigung Gewerbeobjekt', title: 'Grundreinigung', caption: 'Gründliche Grundreinigung von Gewerbeobjekten' },
-      { src: '/images/services/reinigungsdienst/reinigungteam-einsatz.jpg', alt: 'Professionelles Reinigungsteam im Einsatz', title: 'Reinigungsteam', caption: 'Erfahrene Reinigungsteams für alle Anforderungen' },
-      { src: '/images/services/reinigungsdienst/hygiene-standard.jpg', alt: 'Hygiene Standards gewerbliche Reinigung', title: 'Hygienestandards', caption: 'Höchste Hygienestandards nach HACCP und ISO' },
+      { src: '/images/services/bueroreinigung_modern_1783976864868.png', alt: 'Bürogenreinigung modernes Bürogebäude NRW', title: 'Büroreinigung', caption: 'Professionelle Büroreinigung in Duisburg' },
+      { src: '/images/services/industriereinigung_halle_1783977863945.png', alt: 'Industriereinigung Lagerhalle Duisburg', title: 'Industriereinigung', caption: 'Reinigung großer Industriehallen im Ruhrgebiet' },
+      { src: '/images/services/baureinigung_baustelle_1783979228836.png', alt: 'Baureinigung Baustelle NRW', title: 'Baureinigung', caption: 'Endreinigung nach Baumaßnahmen' },
+      { src: '/images/services/grundreinigung_gewerbe_1783979277546.png', alt: 'Grundreinigung Gewerbeobjekt', title: 'Grundreinigung', caption: 'Gründliche Grundreinigung von Gewerbeobjekten' },
+      { src: '/images/services/reinigungsteam_einsatz_1783980320995.png', alt: 'Professionelles Reinigungsteam im Einsatz', title: 'Reinigungsteam', caption: 'Erfahrene Reinigungsteams für alle Anforderungen' },
+      { src: '/images/services/gewerberaum_raeumung_1783977043361.png', alt: 'Hygiene Standards gewerbliche Reinigung', title: 'Hygienestandards', caption: 'Höchste Hygienestandards nach HACCP und ISO' },
     ],
     faqs: [
       {
@@ -239,12 +239,12 @@ export const SERVICES = [
       'Fehlende fachliche Einweisung und mangelnde Qualitätssicherung beim Hilfspersonal',
     ],
     gallery: [
-      { src: '/images/services/lagerlogistik/kommissionierung-lager.jpg', alt: 'Kommissionierung Lager Duisburg', title: 'Kommissionierung', caption: 'Effiziente Kommissionierung im Logistikzentrum' },
-      { src: '/images/services/lagerlogistik/verpackung-versand.jpg', alt: 'Verpackung Versand E-Commerce NRW', title: 'Verpackung & Versand', caption: 'Professionelle Verpackung für E-Commerce' },
-      { src: '/images/services/lagerlogistik/wareneingang-halle.jpg', alt: 'Wareneingang Lagerhalle Ruhrgebiet', title: 'Wareneingang', caption: 'Wareneingang und -prüfung in der Lagerhalle' },
-      { src: '/images/services/lagerlogistik/inventur-lagerbestand.jpg', alt: 'Inventur Lagerbestand', title: 'Inventur', caption: 'Gründliche Inventur mit geschultem Personal' },
-      { src: '/images/services/lagerlogistik/lagerhelfer-team.jpg', alt: 'Lagerhelfer Team Duisburg', title: 'Lagerhelfer Team', caption: 'Eingespieltes Lagerhelfer-Team im Einsatz' },
-      { src: '/images/services/lagerlogistik/logistik-prozess.jpg', alt: 'Logistik Prozesse Optimierung NRW', title: 'Logistik Prozesse', caption: 'Optimierte Logistikprozesse für Ihren Betrieb' },
+      { src: '/images/services/kommissionierung_lager_1783976969431.png', alt: 'Kommissionierung Lager Duisburg', title: 'Kommissionierung', caption: 'Effiziente Kommissionierung im Logistikzentrum' },
+      { src: '/images/services/verpackung_versand_1783977878114.png', alt: 'Verpackung Versand E-Commerce NRW', title: 'Verpackung & Versand', caption: 'Professionelle Verpackung für E-Commerce' },
+      { src: '/images/services/kabelzug_logistikhalle_1783976725308.png', alt: 'Wareneingang Lagerhalle Ruhrgebiet', title: 'Wareneingang', caption: 'Wareneingang und -prüfung in der Lagerhalle' },
+      { src: '/images/services/industriereinigung_halle_1783977863945.png', alt: 'Inventur Lagerbestand', title: 'Inventur', caption: 'Gründliche Inventur mit geschultem Personal' },
+      { src: '/images/services/lager_entruempelung_1783977892960.png', alt: 'Lagerhelfer Team Duisburg', title: 'Lagerhelfer Team', caption: 'Eingespieltes Lagerhelfer-Team im Einsatz' },
+      { src: '/images/services/elektroinstallation_halle_1783979192172.png', alt: 'Logistik Prozesse Optimierung NRW', title: 'Logistik Prozesse', caption: 'Optimierte Logistikprozesse für Ihren Betrieb' },
     ],
     faqs: [
       {
@@ -316,12 +316,12 @@ export const SERVICES = [
       'Koordinationsaufwand für Transportlogistik und behördliche Entsorgungsnachweise',
     ],
     gallery: [
-      { src: '/images/services/entruempelung/gewerberaum-raeumung.jpg', alt: 'Gewerberaum Räumung Duisburg', title: 'Gewerberäumung', caption: 'Vollständige Räumung von Gewerbeobjekten' },
-      { src: '/images/services/entruempelung/lager-entruempelung.jpg', alt: 'Lager Entrümpelung NRW', title: 'Lagerentrümpelung', caption: 'Professionelle Entrümpelung von Lagerflächen' },
-      { src: '/images/services/entruempelung/entsorgung-sortierung.jpg', alt: 'Entsorgung Sortierung Wertstoffe', title: 'Sortierung & Entsorgung', caption: 'Fachgerechte Sortierung und Entsorgung von Wertstoffen' },
-      { src: '/images/services/entruempelung/transporter-entsorgung.jpg', alt: 'Transporter Entsorgung Ruhrgebiet', title: 'Transport & Entsorgung', caption: 'Logistik und Transport für Entsorgungsprojekte' },
-      { src: '/images/services/entruempelung/bueroaufloesung.jpg', alt: 'Büroauflösung gewerblich', title: 'Büroauflösung', caption: 'Vollständige Büroauflösung mit besenreiner Übergabe' },
-      { src: '/images/services/entruempelung/recycling-trennung.jpg', alt: 'Recycling Mülltrennung gewerblich NRW', title: 'Recycling', caption: 'Umweltgerechtes Recycling und Wertstofftrennung' },
+      { src: '/images/services/gewerberaum_raeumung_1783977043361.png', alt: 'Gewerberaum Räumung Duisburg', title: 'Gewerberäumung', caption: 'Vollständige Räumung von Gewerbeobjekten' },
+      { src: '/images/services/lager_entruempelung_1783977892960.png', alt: 'Lager Entrümpelung NRW', title: 'Lagerentrümpelung', caption: 'Professionelle Entrümpelung von Lagerflächen' },
+      { src: '/images/services/baureinigung_baustelle_1783979228836.png', alt: 'Entsorgung Sortierung Wertstoffe', title: 'Sortierung & Entsorgung', caption: 'Fachgerechte Sortierung und Entsorgung von Wertstoffen' },
+      { src: '/images/services/kommissionierung_lager_1783976969431.png', alt: 'Transporter Entsorgung Ruhrgebiet', title: 'Transport & Entsorgung', caption: 'Logistik und Transport für Entsorgungsprojekte' },
+      { src: '/images/services/verpackung_versand_1783977878114.png', alt: 'Büroauflösung gewerblich', title: 'Büroauflösung', caption: 'Vollständige Büroauflösung mit besenreiner Übergabe' },
+      { src: '/images/services/grundreinigung_gewerbe_1783979277546.png', alt: 'Recycling Mülltrennung gewerblich NRW', title: 'Recycling', caption: 'Umweltgerechtes Recycling und Wertstofftrennung' },
     ],
     faqs: [
       {
@@ -393,12 +393,12 @@ export const SERVICES = [
       'Signifikante Termin- und Kostenüberschreitungen durch unzureichende Planung',
     ],
     gallery: [
-      { src: '/images/services/innenausbau/trockenbau-buerogebaeude.jpg', alt: 'Trockenbau Bürogebäude NRW', title: 'Büroausbau Trockenbau', caption: 'Moderner Trockenbauausbau für Bürogebäude in NRW' },
-      { src: '/images/services/innenausbau/staenderwerkbau-gewerbe.jpg', alt: 'Ständerwerkbau Gewerbe Duisburg', title: 'Ständerwerkbau', caption: 'Professioneller Ständerwerkbau für Gewerbeprojekte' },
-      { src: '/images/services/innenausbau/akustikdecke-montage.jpg', alt: 'Akustikdecke Montage Büro', title: 'Akustikdecken', caption: 'Montage von Akustikdecken für optimale Raumakustik' },
-      { src: '/images/services/innenausbau/brandschutzwand.jpg', alt: 'Brandschutzwand F60 Industrie', title: 'Brandschutzwände', caption: 'Zertifizierte Brandschutzwände nach F30/F60/F90' },
-      { src: '/images/services/innenausbau/innenausbau-halle.jpg', alt: 'Innenausbau Industriehalle Ruhrgebiet', title: 'Halleneausbau', caption: 'Vollständiger Innenausbau einer Industriehalle' },
-      { src: '/images/services/innenausbau/systemtrennwaende.jpg', alt: 'Systemtrennwände flexibles Büro', title: 'Systemtrennwände', caption: 'Flexible Systemtrennwände für moderne Arbeitswelten' },
+      { src: '/images/services/staenderwerkbau_gewerbe_1783977908657.png', alt: 'Ständerwerkbau Gewerbe Duisburg', title: 'Ständerwerkbau', caption: 'Professioneller Ständerwerkbau für Gewerbeprojekte' },
+      { src: '/images/services/trockenbau_buerogebaeude_1783977419821.png', alt: 'Trockenbau Bürogebäude NRW', title: 'Büroausbau Trockenbau', caption: 'Moderner Trockenbauausbau für Bürogebäude in NRW' },
+      { src: '/images/services/bueroreinigung_modern_1783976864868.png', alt: 'Akustikdecke Montage Büro', title: 'Akustikdecken', caption: 'Montage von Akustikdecken für optimale Raumakustik' },
+      { src: '/images/services/elektroinstallation_halle_1783979192172.png', alt: 'Brandschutzwand F60 Industrie', title: 'Brandschutzwände', caption: 'Zertifizierte Brandschutzwände nach F30/F60/F90' },
+      { src: '/images/services/netzwerkkabel_datenzentrum_1783979176957.png', alt: 'Innenausbau Industriehalle Ruhrgebiet', title: 'Halleneausbau', caption: 'Vollständiger Innenausbau einer Industriehalle' },
+      { src: '/images/services/kabelmontage_gewerbe_1783978552528.png', alt: 'Systemtrennwände flexibles Büro', title: 'Systemtrennwände', caption: 'Flexible Systemtrennwände für moderne Arbeitswelten' },
     ],
     faqs: [
       {

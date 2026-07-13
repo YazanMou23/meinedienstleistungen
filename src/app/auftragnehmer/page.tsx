@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import AuftragnehmerForm from '@/components/forms/AuftragnehmerForm';
 
 export const metadata: Metadata = {
@@ -10,6 +11,21 @@ export default function AuftragnehmerPage() {
   return (
     <main className="min-h-screen bg-slate-50 pt-24 pb-16">
       <div className="container-md">
+        {/* Role Switcher */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-white border border-slate-200 p-1.5 rounded-2xl inline-flex shadow-sm">
+            <Link 
+              href="/auftraggeber" 
+              className="px-6 py-3 rounded-xl text-sm font-bold text-slate-600 hover:text-slate-900 transition-all hover:bg-slate-50"
+            >
+              Ich bin Auftraggeber
+            </Link>
+            <div className="px-6 py-3 rounded-xl text-sm font-bold bg-[#0a1628] text-white shadow-md">
+              Ich bin Auftragnehmer
+            </div>
+          </div>
+        </div>
+
         <div className="mb-10 text-center max-w-3xl mx-auto">
           <span className="inline-block px-4 py-1.5 rounded-full bg-slate-900/10 text-slate-900 font-bold text-sm tracking-wide mb-4">
             FÜR AUFTRAGNEHMER

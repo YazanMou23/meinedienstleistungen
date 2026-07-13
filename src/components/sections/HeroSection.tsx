@@ -150,40 +150,7 @@ export default function HeroSection({
               </motion.div>
             )}
 
-            {/* Phone CTA */}
-            {isFull && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.35 }}
-                className="mb-10"
-              >
-                <a
-                  href={`tel:${SITE_CONFIG.phone.replace(/\s/g, '')}`}
-                  className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-medium"
-                >
-                  <Phone size={16} className="text-[#c0a678]" />
-                  Direkt anrufen: {SITE_CONFIG.phoneDisplay}
-                </a>
-              </motion.div>
-            )}
 
-            {/* Trust Pills */}
-            {pills && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex flex-wrap gap-2"
-              >
-                {pills.map((pill) => (
-                  <div key={pill} className="flex items-center gap-1.5 text-xs px-3 py-1.5 bg-white/10 border border-white/20 text-slate-200 rounded-full font-medium">
-                    <CheckCircle2 size={12} className="text-[#c0a678] shrink-0" />
-                    {pill}
-                  </div>
-                ))}
-              </motion.div>
-            )}
 
             {children}
           </div>

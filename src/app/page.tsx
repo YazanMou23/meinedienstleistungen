@@ -45,14 +45,6 @@ export default function HomePage() {
         subheadline="Kabelzieharbeiten, Reinigungsdienst, Lagerlogistik, Entrümpelung und Innenausbau — koordiniert, qualitätsgesichert und termingerecht. Sie haben ein Projekt, wir machen den Rest."
         primaryCta={{ label: 'Jetzt Projekt anfragen', href: '/kontakt' }}
         secondaryCta={{ label: 'Leistungen entdecken', href: '/leistungen' }}
-        backgroundImage="/images/case-studies/logistik-kabel.png"
-        trustPills={[
-          'B2B Projektpartner',
-          'Duisburg & NRW',
-          '24h Rückmeldung',
-          'Geprüfte Fachpartner',
-          'Dokumentierte Qualität',
-        ]}
       />
 
       {/* 2. Trust Pillars */}
