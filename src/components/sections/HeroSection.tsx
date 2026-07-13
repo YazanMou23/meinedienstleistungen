@@ -49,8 +49,25 @@ export default function HeroSection({
         isFull ? 'min-h-screen' : 'min-h-[480px] md:min-h-[560px]'
       )}
     >
-      {/* Background (Clean B2B dark navy gradient) */}
-      <div className="absolute inset-0 gradient-navy" />
+      {/* Background (B2B dark navy gradient with optional background image) */}
+      {backgroundImage ? (
+        <>
+          <div
+            className="absolute inset-0 bg-center bg-cover"
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          />
+          <div
+            className={cn(
+              'absolute inset-0',
+              lightOverlay
+                ? 'bg-gradient-to-r from-[#0a1628]/90 via-[#0a1628]/75 to-[#0a1628]/40'
+                : 'bg-gradient-to-r from-[#060e1a]/95 via-[#0a1628]/85 to-[#0a1628]/70'
+            )}
+          />
+        </>
+      ) : (
+        <div className="absolute inset-0 gradient-navy" />
+      )}
 
       {/* Animated decorative orbs */}
       {isFull && (
