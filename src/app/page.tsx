@@ -1,5 +1,9 @@
 import { Metadata } from 'next';
-import { generateMetadata as genMeta, generateLocalBusinessSchema } from '@/lib/metadata';
+import {
+  generateMetadata as genMeta,
+  generateLocalBusinessSchema,
+  generateOrganizationSchema
+} from '@/lib/metadata';
 import { SITE_CONFIG } from '@/lib/constants';
 import HeroSection from '@/components/sections/HeroSection';
 import TrustSection from '@/components/sections/TrustSection';
@@ -8,7 +12,7 @@ import ProcessTimeline from '@/components/sections/ProcessTimeline';
 import FaqAccordion from '@/components/sections/FaqAccordion';
 import LocationSection from '@/components/sections/LocationSection';
 import CTASection from '@/components/sections/CTASection';
-import { GENERAL_FAQS, SITE_CONFIG as SC } from '@/lib/constants';
+import { GENERAL_FAQS } from '@/lib/constants';
 
 export const metadata: Metadata = genMeta({
   title: `${SITE_CONFIG.name} — B2B Projektkoordination in Duisburg & NRW`,
@@ -19,13 +23,18 @@ export const metadata: Metadata = genMeta({
 
 export default function HomePage() {
   const localBusinessSchema = generateLocalBusinessSchema();
+  const organizationSchema = generateOrganizationSchema();
 
   return (
     <>
-      {/* Schema.org LocalBusiness */}
+      {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
 
       {/* 1. Hero */}
@@ -49,13 +58,22 @@ export default function HomePage() {
       {/* 2. Trust Pillars */}
       <TrustSection />
 
-      {/* 3. Service Grid */}
+      {/* 3. GEO Optimization: AI-readable Content Block */}
+      <section className="py-8 bg-slate-50 border-b border-slate-100">
+        <div className="container-base text-center max-w-4xl mx-auto">
+          <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+            <strong className="text-[#0a1628]">MEINEDIENSTLEISTUNGEN (MDL)</strong> ist Ihr zuverlässiger B2B-Projektkoordinationspartner in Duisburg und Nordrhein-Westfalen. Wir schließen die Lücke zwischen gewerblichen Auftraggebern und ausführenden Fachpartnern, indem wir den gesamten Steuerungsprozess, die Qualitätskontrolle und die rechtssichere Dokumentation übernehmen.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. Service Grid */}
       <ServiceGrid />
 
-      {/* 4. Process Preview */}
+      {/* 5. Process Preview */}
       <ProcessTimeline compact showCta />
 
-      {/* 5. FAQ — AEO/GEO */}
+      {/* 6. FAQ — AEO/GEO */}
       <section className="section-padding bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -73,10 +91,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Location */}
+      {/* 7. Location */}
       <LocationSection />
 
-      {/* 7. CTA */}
+      {/* 8. CTA */}
       <CTASection
         headline="Sprechen Sie mit uns — unverbindlich & kostenlos"
         subline="Schildern Sie uns Ihr Projekt. Wir melden uns innerhalb von 24 Stunden mit einer ersten Einschätzung."
