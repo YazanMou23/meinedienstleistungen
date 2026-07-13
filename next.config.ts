@@ -1,10 +1,8 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Enable React strict mode for better development experience
   reactStrictMode: true,
 
-  // Image optimization: allow external images if needed
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -15,7 +13,25 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Headers for security
+  // Redirects from old URLs to new ones
+  async redirects() {
+    return [
+      // Old service slugs → new service slugs
+      { source: '/leistungen/kabelverlegung', destination: '/leistungen/kabelzieharbeiten', permanent: true },
+      { source: '/leistungen/trockenbau', destination: '/leistungen/innenausbau-trockenbau', permanent: true },
+      { source: '/leistungen/fliesenarbeiten', destination: '/leistungen/reinigungsdienst', permanent: true },
+      { source: '/leistungen/lager-logistik', destination: '/leistungen/lagerlogistik', permanent: true },
+      // Old page routes → new routes
+      { source: '/so-funktionierts', destination: '/ablauf', permanent: true },
+      { source: '/referenzen', destination: '/leistungen', permanent: true },
+      { source: '/referenzen/:slug', destination: '/leistungen', permanent: true },
+      { source: '/partner-werden', destination: '/kontakt', permanent: true },
+      { source: '/faq', destination: '/', permanent: true },
+      { source: '/blog', destination: '/', permanent: true },
+      { source: '/blog/:slug', destination: '/', permanent: true },
+    ];
+  },
+
   async headers() {
     return [
       {

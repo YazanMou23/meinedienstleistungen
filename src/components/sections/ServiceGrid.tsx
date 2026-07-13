@@ -1,81 +1,116 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Cable, Layers, Grid3X3, Package, ArrowRight } from 'lucide-react';
-import SectionHeading from '@/components/ui/SectionHeading';
+import { motion } from 'framer-motion';
+import { ArrowRight, Cable, Sparkles, Package, Trash2, Layers } from 'lucide-react';
 import { SERVICES } from '@/lib/constants';
+import { cn } from '@/lib/utils';
 
-const iconMap: Record<string, React.ReactNode> = {
-  cable: <Cable size={28} className="text-blue-600" />,
-  layers: <Layers size={28} className="text-blue-600" />,
-  grid: <Grid3X3 size={28} className="text-blue-600" />,
-  package: <Package size={28} className="text-blue-600" />,
+const iconMap: Record<string, React.ElementType> = {
+  cable: Cable,
+  sparkles: Sparkles,
+  package: Package,
+  'trash-2': Trash2,
+  layers: Layers,
+};
+
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.1 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 export default function ServiceGrid() {
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          label="Unsere Leistungen"
-          title="Was wir für Sie koordinieren"
-          subtitle="Vier Branchen, ein Ansprechpartner — wir steuern qualitätsgesicherte Projekte von der Anfrage bis zur Abnahme."
-          align="center"
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {SERVICES.map((service, index) => (
-            <motion.div
-              key={service.slug}
-              className="flex h-full"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-            >
-              <Link
-                href={`/leistungen/${service.slug}`}
-                className="group flex flex-col justify-between w-full bg-white border border-slate-100 hover:border-blue-100 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300"
-              >
-                <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 rounded-xl bg-blue-50 group-hover:bg-blue-100 flex items-center justify-center shrink-0 transition-colors">
-                    {iconMap[service.icon]}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-1.5 mb-5">
-                      {service.features.slice(0, 3).map((feature) => (
-                        <li key={feature} className="flex items-center gap-2 text-xs text-slate-500">
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="sm:pl-[76px] mt-4">
-                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 group-hover:gap-2.5 transition-all">
-                    Mehr erfahren
-                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+    <section className="section-padding bg-slate-50">
+      <div className="container-base">
+        <div className="text-center mb-12 md:mb-16">
+          <span className="inline-flex items-center text-xs font-bold tracking-[0.15em] uppercase px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-100 mb-4">
+            Unsere Leistungen
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
+            Fünf Branchen. Ein Koordinationspartner.
+          </h2>
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
+            Jede Leistung mit geprüften Fachpartnern, definierten Qualitätsstandards
+            und einem persönlichen Projektkoordinator.
+          </p>
         </div>
 
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: '-80px' }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          {SERVICES.map((service, index) => {
+            const Icon = iconMap[service.icon] || Cable;
+            const isLarge = index === 0; // first card spans 2 cols on lg
+
+            return (
+              <motion.div
+                key={service.slug}
+                variants={item}
+                className={cn(
+                  'group relative bg-white rounded-2xl border border-slate-100 overflow-hidden hover:border-blue-100 hover:shadow-xl transition-all duration-300',
+                  isLarge ? 'sm:col-span-2 lg:col-span-1' : ''
+                )}
+              >
+                {/* Top bar accent */}
+                <div className="h-1 bg-gradient-to-r from-[#c0a678] to-[#d4c390]" />
+
+                <div className="p-6 md:p-8">
+                  {/* Icon */}
+                  <div className="w-12 h-12 rounded-xl bg-[#0a1628] flex items-center justify-center mb-5 group-hover:bg-[#c0a678] transition-colors duration-300">
+                    <Icon size={22} className="text-[#c0a678] group-hover:text-white transition-colors duration-300" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+                    {service.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+
+                  {/* Feature list (top 3) */}
+                  <ul className="space-y-2 mb-7">
+                    {service.features.slice(0, 3).map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-sm text-slate-600">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#c0a678] shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* CTA */}
+                  <Link
+                    href={`/leistungen/${service.slug}`}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c0a678] hover:text-[#aa905d] transition-colors group/link"
+                  >
+                    Mehr erfahren
+                    <ArrowRight size={15} className="transition-transform group-hover/link:translate-x-1" />
+                  </Link>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+
+        {/* Bottom CTA */}
         <div className="mt-10 text-center">
           <Link
             href="/leistungen"
-            className="inline-flex items-center gap-2 text-slate-600 hover:text-blue-600 font-medium text-sm transition-colors"
+            className="inline-flex items-center gap-2 border-2 border-[#0a1628] text-[#0a1628] hover:bg-[#0a1628] hover:text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 text-sm"
           >
-            Alle Leistungsbereiche ansehen
+            Alle Leistungen ansehen
             <ArrowRight size={16} />
           </Link>
         </div>

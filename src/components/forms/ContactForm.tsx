@@ -1,7 +1,6 @@
 'use client';
 
 import { useActionState } from 'react';
-import { useRef } from 'react';
 import { CheckCircle2, Loader2 } from 'lucide-react';
 import { submitContactForm, type ContactFormState } from '@/app/kontakt/actions';
 import { SERVICES } from '@/lib/constants';
@@ -10,7 +9,6 @@ const initialState: ContactFormState = { success: false };
 
 export default function ContactForm() {
   const [state, action, isPending] = useActionState(submitContactForm, initialState);
-  const formRef = useRef<HTMLFormElement>(null);
 
   if (state.success) {
     return (
@@ -28,8 +26,11 @@ export default function ContactForm() {
     );
   }
 
+  const inputClass =
+    'w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#c0a678] focus:border-transparent transition-all text-sm';
+
   return (
-    <form ref={formRef} action={action} className="space-y-5">
+    <form action={action} className="space-y-5">
       {/* Name + Company */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
@@ -41,7 +42,7 @@ export default function ContactForm() {
             name="name"
             type="text"
             placeholder="Max Mustermann"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+            className={inputClass}
             required
           />
           {state.fieldErrors?.name && (
@@ -57,7 +58,7 @@ export default function ContactForm() {
             name="company"
             type="text"
             placeholder="Musterfirma GmbH"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+            className={inputClass}
           />
         </div>
       </div>
@@ -73,7 +74,7 @@ export default function ContactForm() {
             name="email"
             type="email"
             placeholder="max@musterfirma.de"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+            className={inputClass}
             required
           />
           {state.fieldErrors?.email && (
@@ -89,7 +90,7 @@ export default function ContactForm() {
             name="phone"
             type="tel"
             placeholder="+49 201 123456"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+            className={inputClass}
           />
         </div>
       </div>
@@ -102,7 +103,7 @@ export default function ContactForm() {
         <select
           id="service"
           name="service"
-          className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+          className={inputClass}
           required
         >
           <option value="">Bitte wählen …</option>
@@ -128,7 +129,7 @@ export default function ContactForm() {
           name="message"
           rows={5}
           placeholder="Beschreiben Sie Ihr Projekt kurz: Was soll gemacht werden? Ungefähre Größe/Menge? Gewünschter Zeitrahmen?"
-          className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-y"
+          className={`${inputClass} resize-y`}
           required
           minLength={20}
         />
@@ -144,11 +145,11 @@ export default function ContactForm() {
           name="privacy"
           type="checkbox"
           required
-          className="mt-1 w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+          className="mt-1 w-4 h-4 rounded border-slate-300 text-[#c0a678] focus:ring-[#c0a678] accent-[#c0a678]"
         />
         <label htmlFor="privacy" className="text-xs text-slate-500 leading-relaxed">
           Ich stimme der Verarbeitung meiner Daten gemäß der{' '}
-          <a href="/datenschutz" className="text-blue-600 hover:underline">
+          <a href="/datenschutz" className="text-[#c0a678] hover:underline">
             Datenschutzerklärung
           </a>{' '}
           zu. <span className="text-rose-500">*</span>
@@ -164,7 +165,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isPending}
-        className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 text-base shadow-sm disabled:cursor-not-allowed"
+        className="w-full flex items-center justify-center gap-2 bg-[#c0a678] hover:bg-[#aa905d] disabled:bg-[#c0a678]/60 text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 text-sm shadow-sm disabled:cursor-not-allowed active:scale-[0.99]"
       >
         {isPending ? (
           <>
