@@ -49,25 +49,8 @@ export default function HeroSection({
         isFull ? 'min-h-screen' : 'min-h-[480px] md:min-h-[560px]'
       )}
     >
-      {/* Background */}
-      {backgroundImage ? (
-        <>
-          <div
-            className="absolute inset-0 bg-center bg-cover"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
-          />
-          <div
-            className={cn(
-              'absolute inset-0',
-              lightOverlay
-                ? 'bg-gradient-to-r from-[#0a1628]/90 via-[#0a1628]/75 to-[#0a1628]/40'
-                : 'bg-gradient-to-r from-[#060e1a]/95 via-[#0a1628]/85 to-[#0a1628]/70'
-            )}
-          />
-        </>
-      ) : (
-        <div className="absolute inset-0 gradient-navy" />
-      )}
+      {/* Background (Clean B2B dark navy gradient) */}
+      <div className="absolute inset-0 gradient-navy" />
 
       {/* Animated decorative orbs */}
       {isFull && (
@@ -190,14 +173,14 @@ export default function HeroSection({
 
           {/* Desktop shape collage with service photos */}
           {isFull && (
-            <div className="hidden lg:block lg:col-span-5 relative h-[500px]">
+            <div className="hidden lg:block lg:col-span-5 relative h-[520px]">
               <div className="relative w-full h-full">
                 {/* Photo 1: Kabelzieharbeiten */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8, rotate: -6 }}
                   animate={{ opacity: 1, scale: 1, rotate: -6 }}
                   transition={{ duration: 0.7, delay: 0.3 }}
-                  className="absolute top-10 left-0 w-52 h-36 rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-20 group hover:z-30 hover:scale-105 transition-all duration-300"
+                  className="absolute top-2 left-2 w-[180px] h-[130px] rounded-2xl overflow-hidden shadow-xl border-4 border-white z-20 group hover:z-40 hover:scale-105 transition-all duration-300"
                 >
                   <img
                     src="/images/services/kabelzieharbeiten/kabelzug-logistikhalle.jpg"
@@ -209,10 +192,10 @@ export default function HeroSection({
 
                 {/* Photo 2: Lagerlogistik */}
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8, rotate: 6 }}
-                  animate={{ opacity: 1, scale: 1, rotate: 6 }}
+                  initial={{ opacity: 0, scale: 0.8, rotate: 8 }}
+                  animate={{ opacity: 1, scale: 1, rotate: 8 }}
                   transition={{ duration: 0.7, delay: 0.4 }}
-                  className="absolute bottom-12 left-6 w-48 h-44 rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10 group hover:z-30 hover:scale-105 transition-all duration-300"
+                  className="absolute top-16 right-4 w-[160px] h-[160px] rounded-2xl overflow-hidden shadow-xl border-4 border-white z-10 group hover:z-40 hover:scale-105 transition-all duration-300"
                 >
                   <img
                     src="/images/services/lagerlogistik/kommissionierung-lager.jpg"
@@ -222,12 +205,42 @@ export default function HeroSection({
                   <div className="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors duration-300" />
                 </motion.div>
 
-                {/* Photo 3: Innenausbau */}
+                {/* Photo 3: Reinigungsdienst */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8, rotate: 4 }}
                   animate={{ opacity: 1, scale: 1, rotate: 4 }}
                   transition={{ duration: 0.7, delay: 0.5 }}
-                  className="absolute top-2 right-4 w-56 h-48 rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10 group hover:z-30 hover:scale-105 transition-all duration-300"
+                  className="absolute top-[150px] left-[60px] w-[180px] h-[130px] rounded-2xl overflow-hidden shadow-xl border-4 border-white z-30 group hover:z-40 hover:scale-105 transition-all duration-300"
+                >
+                  <img
+                    src="/images/services/reinigungsdienst/bueroreinigung-modern.jpg"
+                    alt="Gewerbliche Büroreinigung in Essen"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors duration-300" />
+                </motion.div>
+
+                {/* Photo 4: Entrümpelung */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8, rotate: -4 }}
+                  animate={{ opacity: 1, scale: 1, rotate: -4 }}
+                  transition={{ duration: 0.7, delay: 0.6 }}
+                  className="absolute top-[230px] right-2 w-[190px] h-[130px] rounded-2xl overflow-hidden shadow-xl border-4 border-white z-20 group hover:z-40 hover:scale-105 transition-all duration-300"
+                >
+                  <img
+                    src="/images/services/entruempelung/gewerberaum-raeumung.jpg"
+                    alt="Gewerbliche Räumung und Entrümpelung in Oberhausen"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors duration-300" />
+                </motion.div>
+
+                {/* Photo 5: Innenausbau */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8, rotate: -8 }}
+                  animate={{ opacity: 1, scale: 1, rotate: -8 }}
+                  transition={{ duration: 0.7, delay: 0.7 }}
+                  className="absolute bottom-[60px] left-2 w-[170px] h-[130px] rounded-2xl overflow-hidden shadow-xl border-4 border-white z-20 group hover:z-40 hover:scale-105 transition-all duration-300"
                 >
                   <img
                     src="/images/services/innenausbau/trockenbau-buerogebaeude.jpg"
@@ -237,16 +250,16 @@ export default function HeroSection({
                   <div className="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors duration-300" />
                 </motion.div>
 
-                {/* Photo 4: Reinigungsdienst */}
+                {/* Photo 6: Lagerentrümpelung / General B2B */}
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8, rotate: -8 }}
-                  animate={{ opacity: 1, scale: 1, rotate: -8 }}
-                  transition={{ duration: 0.7, delay: 0.6 }}
-                  className="absolute bottom-4 right-0 w-52 h-36 rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-20 group hover:z-30 hover:scale-105 transition-all duration-300"
+                  initial={{ opacity: 0, scale: 0.8, rotate: 6 }}
+                  animate={{ opacity: 1, scale: 1, rotate: 6 }}
+                  transition={{ duration: 0.7, delay: 0.8 }}
+                  className="absolute bottom-2 right-[40px] w-[190px] h-[130px] rounded-2xl overflow-hidden shadow-xl border-4 border-white z-30 group hover:z-40 hover:scale-105 transition-all duration-300"
                 >
                   <img
-                    src="/images/services/reinigungsdienst/bueroreinigung-modern.jpg"
-                    alt="Gewerbliche Büroreinigung in Essen"
+                    src="/images/services/entruempelung/lager-entruempelung.jpg"
+                    alt="Lagerhallen Entrümpelung und Sortierung in NRW"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors duration-300" />
