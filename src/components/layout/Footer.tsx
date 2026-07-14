@@ -7,6 +7,7 @@ const footerLinks = {
   unternehmen: [
     { label: 'Über MDL', href: '/ueber-uns' },
     { label: 'Ablauf', href: '/ablauf' },
+    { label: 'Karriere', href: '/karriere' },
     { label: 'Kontakt', href: '/kontakt' },
   ],
   legal: [

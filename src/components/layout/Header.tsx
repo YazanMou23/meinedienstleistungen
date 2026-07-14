@@ -275,7 +275,7 @@ export default function Header() {
               </a>
               <Link
                 href="/auftraggeber"
-                className="flex items-center justify-center gap-2 w-full bg-[#c0a678] hover:bg-[#aa905d] text-white font-bold px-6 py-3.5 rounded-xl transition-colors text-center shadow-sm"
+                className="hidden items-center justify-center gap-2 w-full bg-[#c0a678] hover:bg-[#aa905d] text-white font-bold px-6 py-3.5 rounded-xl transition-colors text-center shadow-sm"
               >
                 Projekt anfragen
               </Link>
