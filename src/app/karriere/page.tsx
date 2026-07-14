@@ -3,6 +3,7 @@ import { Briefcase, ChevronRight } from 'lucide-react';
 import HeroSection from '@/components/sections/HeroSection';
 import SectionHeading from '@/components/ui/SectionHeading';
 import CTASection from '@/components/sections/CTASection';
+import BewerberForm from '@/components/forms/BewerberForm';
 import { generateMetadata as genMeta } from '@/lib/metadata';
 import Link from 'next/link';
 
@@ -62,26 +63,33 @@ export default function KarrierePage() {
                   <h3 className="font-bold text-slate-900 text-xl mb-3">{job.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed mb-6">{job.desc}</p>
                 </div>
-                <Link
-                  href="/kontakt"
+                <a
+                  href="#bewerben"
                   className="inline-flex items-center gap-2 text-[#c0a678] font-semibold text-sm group-hover:text-[#aa905d] transition-colors"
                 >
                   Jetzt bewerben
                   <ChevronRight size={16} />
-                </Link>
+                </a>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <CTASection
-        headline="Bereit für den nächsten Schritt?"
-        subline="Sende uns deine Unterlagen oder melde dich telefonisch bei uns für ein erstes Kennenlernen."
-        primaryLabel="Jetzt Kontakt aufnehmen"
-        primaryHref="/kontakt"
-        showPhone
-      />
+      {/* Application Form Section */}
+      <section id="bewerben" className="section-padding bg-white">
+        <div className="container-base max-w-3xl mx-auto">
+          <SectionHeading
+            label="Bewerbung"
+            title="Jetzt online bewerben"
+            subtitle="Nutzen Sie unser einfaches Formular, um sich direkt bei uns zu bewerben. Wir melden uns zeitnah bei Ihnen zurück."
+            align="center"
+          />
+          <div className="mt-12 bg-white rounded-3xl p-6 sm:p-10 border border-slate-100 shadow-sm">
+            <BewerberForm />
+          </div>
+        </div>
+      </section>
     </>
   );
 }
